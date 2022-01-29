@@ -1,0 +1,19 @@
+function addSync(a,b) {
+    return a+b;
+}
+
+let sum = addSync(1,2);
+
+function add(a, b, callbackfunction) {
+
+    callbackfunction (null, a+b)
+}
+
+let sum2;
+add(1, 2, (err, returnValue) => {
+    sum2 = returnValue
+})
+
+console.log(sum) //3
+console.log(sum2) //3
+
