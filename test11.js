@@ -17,13 +17,15 @@ new Promise((rs) => {
     console.log("2");
     rs();
   }, 1000);
-}).then(() => {
+})
+.then(() => {
   new Promise((rs) => {
     setTimeout(() => {
       console.log("3");
       rs();
     }, 1000);
-  }).then(() => {
+  })
+  .then(() => {
     setTimeout(() => console.log("4"), 1000);
   });
 });
