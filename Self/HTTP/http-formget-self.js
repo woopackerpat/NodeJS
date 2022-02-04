@@ -21,7 +21,7 @@ http.createServer( (req, res) => {
         return renderHTML('./formget.html', req, res)
 
     if(myURL.pathname === '/getdata') {
-        res.writeHead(200, {"content-type" : "text/html; charset = utf8"})
+        res.writeHead(200, {'content-type' : 'text/html; charset= utf8'})
         res.write(`<h3>We got your data</h3>` )
         res.write(`<p>ชื่อ: ${myURL.query.fname}</p>` )
         res.write(`<p>นามสกุล: ${myURL.query.lname}</p>` )
